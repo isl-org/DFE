@@ -13,10 +13,10 @@ The trained network can be used to compute a fundamental matrix based on noisy p
 
 Create and activate conda environment:
 
-    ```shell
-    conda env create -f environment.yml
-    conda activate dfe
-    ```
+```shell
+conda env create -f environment.yml
+conda activate dfe
+```
 
 ## Train
 
@@ -59,11 +59,9 @@ sparse/0/images.bin
 
 `cameras.bin` and `images.bin` are SfM reconstruction in COLMAP format. 
 
-`reconstruction.db` contains descriptors, matches etc.
+`reconstruction.db` contains descriptors, matches, etc.
 
-These files are automatically created when performing reconstruction using COLMAP. 
-
-We found that better training results achieved when using less aggressive filtering for feature matching than the default COLMAP settings. The recommended way to create a training set is:
+These files are automatically created when performing reconstruction using COLMAP. We found that better training results achieved when using less aggressive filtering for feature matching than the default COLMAP settings. The recommended way to create a training set is:
 
 1) Run COLMAP to produce `cameras.bin` and `images.bin` and initial `reconstruction.db`
 2) Run `get_features.sh` to produce a training set with higher outlier ratios to replace `reconstruction.db`
