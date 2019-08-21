@@ -61,7 +61,7 @@ sparse/0/images.bin
 
 `reconstruction.db` contains descriptors, matches, etc.
 
-These files are automatically created when performing reconstruction using COLMAP. We found that better training results achieved when using less aggressive filtering for feature matching than the default COLMAP settings. The recommended way to create a training set is:
+These files are automatically created when performing reconstruction using COLMAP. We found that better results are achieved with less aggressive filtering for feature matching than the default COLMAP settings. The recommended way to create a training set is:
 
 1) Run COLMAP to produce `cameras.bin` and `images.bin` and initial `reconstruction.db`
 2) Run `get_features.sh` to produce a training set with higher outlier ratios to replace `reconstruction.db`
